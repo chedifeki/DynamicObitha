@@ -2,37 +2,13 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Obitha's Shop</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <?php include "php/Controllers/_dependencies.php"?>
     
-    
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-        <script>
+    <script>
             $(window).on('load',function(){
                 $("#OnLoadModal").modal('show');
             });
         </script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/logo.png">
-    <script src="https://kit.fontawesome.com/8272a11b3d.js" crossorigin="anonymous">
-    </script>
-    
 </head>
 
 <body class="dp0">
@@ -40,48 +16,7 @@
     <!---------------------------------Modal----------------------------------------->
     <!------------------------------------------------------------------------------->
     
-    <div class="modal fade " id="OnLoadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered " role="document">
-          <div class="modal-content dp24">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Welcome! and some Warnings</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h3>Welcome Visitor!</h3><br>
-              This website is a study of Dark Themed E-shops<br>
-              It is done by Chedi Feki for a Web Developement Course<br>
-              <hr>
-              Concepts applied: <br>
-              <ul>
-                  <li>HTML5 document structure</li>
-                  <li>CSS3 and Bootstrap integration for responsiveness</li>
-                  <li>vanilla JavaScript and basic DOM manipulations</li>
-              </ul>
-              <hr>
-              While the above mentioned concepts are applied seriously, the creator of this website
-              saw an opportunity in giving it a... <br> Fantasy twist!<br>
-              The site revolves around the Obitha character, a fearsome persona from the Tunisian Folklore and explores the possibility of her owning an E-commerce.
-              <br>All the content and Imagery of this site follows that theme and is therefore, just a big joke. 
-              <hr>
-              I, Chedi Feki, hereby affirm that I in no way endorse or encourage or promote the use of Magic, Child Mutilations or any abusive behaviors those characters are known for
-              <br>This is just fiction, please take it with a light heart.
-              <hr>
-              <h4>This is still a Work in Progress!</h4>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-prime" data-dismiss="modal">Acknowledged</button>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
+    <?php include "php/Components/_welcomeModal.php"?>
 
 
     <!------------------------------------------------------------------------------->
@@ -108,14 +43,14 @@
                 <hr class="d-lg-none">
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0 pl-xl-5">
                     <li class="nav-item  mx-xl-5 mx-lg-3 ">
-                        <a class="nav-link" href="artefacts.html">
+                        <a class="nav-link" href="artefacts.php">
                             <img src="img/khomsa.png" width="32">
                             Artefacts
                         </a>
                         <hr class="d-lg-none">
                     </li>
                     <li class="nav-item mx-xl-5 mx-lg-3">
-                        <a class="nav-link" href="cauldron.html">
+                        <a class="nav-link" href="cauldron.php">
                             <input id="prodCountStore" type="hidden" value=0>
                             <img id="cauldronImg" src="img/cauldron_empty.png" width="32">
                             Cauldron <span class="d-none" id="prodCountDisplay"></span>
@@ -123,7 +58,7 @@
                         <hr class="d-lg-none">
                     </li>
                     <li class="nav-item mx-xl-5 mx-lg-3">
-                        <a class="nav-link" href="contact.html">
+                        <a class="nav-link" href="contact.php">
                             <img src="img/parchment.png" width="32">
                             Summon Us
                         </a>
@@ -142,57 +77,7 @@
     <!------------------------------------------------------------------------------->
     <!-----------------------------Caroussel----------------------------------------->
     <!------------------------------------------------------------------------------->
-    <div id="carouselIndicators" class="content_center col carousel slide  px-0 " data-ride="carousel"
-        id="pr_carousel_1">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselIndicators" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="">
-                    <img class="d-block w-100" src="img/carousel_crystals.jpg" alt="First slide">
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Crystals, Amulets and Enchanted tools</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="">
-                    <img class="d-block w-100" src="img/carousel_grimoire.jpg" alt="Second slide">
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Grimoires, Boards and Cards</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="">
-                    <img class="d-block w-100" src="img/carousel_potions.jpg" alt="Third slide">
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Potions and Ingredients</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="">
-                    <img class="d-block w-100" src="img/carousel_wand.jpg" alt="Fourth slide">
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Wands, Brooms and other Oddities</h5>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+    <?php include "php/Components/_indexCarousel.php"?>
     <br>
     <br>
     <br>
@@ -283,16 +168,14 @@
     <!------------------------------------------------------------------------------->
     <!-----------------------------------Footer-------------------------------------->
     <!------------------------------------------------------------------------------->
-
-    <footer class="container-fluid" style="background-color: black;">
-        <div clas="row">
-            <p class="col mx-auto my-0 p-0 text-center memp">
-                ©Mme Obitha™ -- 2021<br>
-                Made By Chedi Feki
-            </p>
-        </div>
-    </footer>
+    <?php include "php/Components/_footer.php"?>
+   
     
+
+
+    <!------------------------------------------------------------------------------->
+    <!-----------------------------------Scripts------------------------------------->
+    <!------------------------------------------------------------------------------->
     <script src="js/headerScroll.js"></script>
 </body>
 

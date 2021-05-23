@@ -2,29 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Obitha's Shop</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/logo.png">
-    <script 
-        src="https://kit.fontawesome.com/8272a11b3d.js" 
-        crossorigin="anonymous">
-    </script>
+    <?php include "php/Controllers/_dependencies.php"?>
 </head>
 
 <body class="dp0">
@@ -34,13 +12,13 @@
 
     <header class="">
         <div id="logo" class="container-fluid">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="img/fullLogo.png" alt="logo of Obitha's Shop" id="logoimg" class="row mx-auto img-fluid">
             </a>
         </div>
         <div id="calibrator" class="d-none" style=" height:64px;"></div>
         <nav class="navbar navbar-expand-lg navbar-dark dp6">
-            <a class="navbar-brand invisible" href="index.html">
+            <a class="navbar-brand invisible" href="index.php">
                 <h2 id="obitha">Obitha's Shop</h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -60,7 +38,7 @@
                         <hr class="d-lg-none">
                     </li>
                     <li class="nav-item mx-xl-5 mx-lg-3">
-                        <a class="nav-link" href="cauldron.html">
+                        <a class="nav-link" href="cauldron.php">
                             <input id="prodCountStore" type="hidden" value=0>
                             <img id="cauldronImg" src="img/cauldron_empty.png" width="32">
                             Cauldron <span class="d-none" id="prodCountDisplay"></span>
@@ -68,7 +46,7 @@
                         <hr class="d-lg-none">
                     </li>
                     <li class="nav-item mx-xl-5 mx-lg-3">
-                        <a class="nav-link" href="contact.html">
+                        <a class="nav-link" href="contact.php">
                             <img src="img/parchment.png" width="32">
                             Summon Us
                         </a>
@@ -464,15 +442,13 @@
     <!------------------------------------------------------------------------------->
     <!-----------------------------------Footer-------------------------------------->
     <!------------------------------------------------------------------------------->
-    <footer class="container-fluid" style="background-color: black;">
-        <div clas="row">
-            <p class="col mx-auto my-0 p-0 text-center memp">
-                ©Mme Obitha™ -- 2021<br>
-                Made By Chedi Feki
-            </p>
-        </div>
-    </footer>
+    <?php include "php/Components/_footer.php"?>
 
+
+
+    <!------------------------------------------------------------------------------->
+    <!-----------------------------------Scripts------------------------------------->
+    <!------------------------------------------------------------------------------->
     <script src="js/cartManager.js"></script>
     <script src="js/headerScroll.js"></script>
     <script src="js/tabs.js"></script>
