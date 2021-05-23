@@ -93,95 +93,24 @@
     <!------------------------------------------------------------------------------->
     <!-------------------------------ProductsDisplay--------------------------------->
     <!------------------------------------------------------------------------------->
+
+
+    <!----------------------------------Amulets-------------------------------------->
     <section class="container categ mb-4" id="Amulets">
         <div class="dp1  mx-auto rounded p-2 p-lg-4">
             <h2>Crystals, Amulets and Enchanted tools</h2>
             <div id="card_container" class="row">
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="amulet_card_1" class="card  w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/crystal_1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Quartzium</h5>
-                            <p class="card-text memp">Divine Love, Magic Amplifier, If you shake it Fast enough you Might Speed up Time, Magic! right?</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        69dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class=" addProduct_btn card-btn d-inline-flex justify-content-around align-items-center">
-                                        <span> Add</span>
-                                        <img src="img/cauldron_empty.png" width=32> 
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_amuletCard1.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="amulet_card_2" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/Amulet_1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Al-fadhir O'din </h5>
-                            <p class="card-text memp">Conjure the protection of the norse, unleash ragnarok, protection against ice giants and other Ikea puzzles</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        15dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_amuletCard2.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="amulet_card_3" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/crystal_3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Citrine</h5>
-                            <p class="card-text memp"> Energise and Revitalise your Money and Financial Magic, Manifest Abundance and Excell at Air Magic</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        156dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <?php include "php/Components/Product Cards/_amuletCard3.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="amulet_card_4" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/enchanted_pickAxe.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Enchanted Pickaxe </h5>
-                            <p class="card-text memp">Mine Obsidian, Diamonds and the rarest Lapis Lazuli Gemstones with this Enchanted Pickaxe<br>Damage: over 9000 <br> HP: 45</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        180dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_amuletCard4.php"?>
                 </div>
             </div>
         </div>
@@ -189,121 +118,25 @@
 
 
 
-
+<!---------------------------------Grimoires----------------------------------------->
     <section class="container categ mb-4" id="Grimoires">
         <div class="dp1 mx-auto  rounded p-2 p-lg-4">
             <h2>Grimoires, Boards and Cards</h2>
             <div id="card_container" class="row">
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Grimoire_card_1" class="card  w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/Grimoire_1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">The Book of Shadows</h5>
-                            <p class="card-text memp">
-                                Standard text-book magic, age old spells and very weak magic overall. Good for initiates and beginners. 
-                            </p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        24dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_grimoireCard1.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Grimoire_card_2" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/Tarot.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Tarot set</h5>
-                            <p class="card-text memp">Dig deeper into your client's fetishes, used by famous fortune-tellers for ages.<br>Accuracy: 23%</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        7dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_grimoireCard2.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Grimoire_card_3" class="card w-100 rounded">
-                        <div class="imgPopcontainer">
-                            <div class="popular">Popular Product</div>
-                            <img class="card-img-top m-2 border-prime" src="img/Grimoire_2.jpg" alt="Card image cap">
-                        </div>
-                        
-                        <div class="card-body">
-                            <h5 class="card-title">Magic tricks with Children</h5>
-                            <p class="card-text memp">Take your children's attention away while you cook them... <br>Bon Appetit!</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        53dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_grimoireCard3.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Grimoire_card_3" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/ouija.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Ouija Board</h5>
-                            <p class="card-text memp">Very Large Bandwidth for conjuring even the most remote spirits! A Must have for any respectable witch</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        42dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_grimoireCard4.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Grimoire_card_3" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/Grimoire_3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Sun U'din Bacha</h5>
-                            <p class="card-text memp">Explore this Fantastic arabic grimoire.<br>Contains the darkest of magic and might turn you.. GAY!</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        365dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_grimoireCard5.php"?>
                 </div>
             </div>
         </div>
@@ -311,125 +144,35 @@
 
 
 
-
+<!-----------------------------------Potions------------------------------------>
     <section class="container  categ mb-4" id="Potions">
         <div class="dp1  mx-auto  rounded p-2 p-lg-4">
             <h2>Potions and Ingredients</h2>
             <div id="card_container" class="row">
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Potions_card_1" class="card  w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/potion_1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Health Potion</h5>
-                            <p class="card-text memp">Instantly restores +15HP<br>Increased Critical Hit Chance for 30s<br>Impervious for 5s</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        69dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_potionsCard1.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Potions_card_2" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/potion_2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Boiling Water</h5>
-                            <p class="card-text memp">Famous North-African All-spell-eraser.<br>Avoid drinking from it immediately... <br>It's boiling!</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        222dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_potionsCard2.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Potions_card_3" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/potion_3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Felix Felicis</h5>
-                            <p class="card-text memp">Good Luck Charm<br>Boosts confidence and Attractiveness<br>May contain a hint of Bourbon and THC</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        420dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_potionsCard3.php"?>
                 </div>
             </div>
         </div>
     </section>
 
 
-
+<!-------------------------------------------Wands------------------------------------>
     <section class="container  categ mb-4 " id="Wands">
         <div class="dp1  mx-auto  rounded p-2 p-lg-4">
             <h2>Wands, Brooms and other Oddities</h2>
             <div id="card_container" class="row">
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Wands_card_1" class="card  w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/staff_gandalf.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Staff of Gandalf</h5>
-                            <p class="card-text memp">YOU SHALL NOT ... PASS!<br>Very potent Staff, shoots fireworks and smoke rings<br>Efficient against Balrogs and Death</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        1 Ring
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_wandsCard1.php"?>
                 </div>
                 <div class="col-12 col-lg-4 my-2">
-                    <div id="Wands_card_2" class="card w-100 rounded">
-                        <img class="card-img-top m-2 border-prime" src="img/Broom.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Nimbus 2000</h5>
-                            <p class="card-text memp">One of the Nimbus Company's most successful models. Highly reliable with good speed and exceptional handling.<br>Not for beginners!</p>
-                            <div class="row">
-                                <div class="col-5 col-lg-6 col-xl-5 text-center">
-                                    <h2 class="hemp">
-                                        2000dt
-                                    </h2>
-                                </div>
-                                <div class="col-7 col-lg-6 col-xl-7 text-center">
-                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
-                                        ><span> Add</span><img src="img/cauldron_empty.png"
-                                            width=32> </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include "php/Components/Product Cards/_wandsCard2.php"?>
                 </div>
                 
             </div>
