@@ -192,9 +192,9 @@
     <!------------------------------------------------------------------------------->
     <!-----------------------------------Scripts------------------------------------->
     <!------------------------------------------------------------------------------->
-    <script src="js/cartManager.js"></script>
-    <script src="js/headerScroll.js"></script>
-    <script src="js/tabs.js"></script>
+    <script src="js/cartManagerv2.js"></script>
+    <script src="js/headerManager.js"></script>
+    <script src="js/categoriesManager.js"></script>
 </body>
 
 </html>

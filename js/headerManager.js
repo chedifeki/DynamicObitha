@@ -1,3 +1,9 @@
+var setupListeners = function(){
+    
+}
+window.addEventListener('load',setupListeners);
+
+
 window.onscroll = function() {
     var distanceScrolled = document.documentElement.scrollTop;
     var currHeight = document.querySelector('#logo').clientHeight;
@@ -17,3 +23,6 @@ window.onscroll = function() {
     }
 
 }
+
+
+

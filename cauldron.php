@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <?php include "php/Controllers/_dependencies.php"?>
+    <?php include "php/Controllers/_dependencies.php" ?>
 </head>
 
 <body class="dp0">
@@ -21,8 +21,7 @@
             <a class="navbar-brand invisible" href="index.php">
                 <h2 id="obitha">Obitha's Shop</h2>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -36,7 +35,7 @@
                         </a>
                         <hr class="d-lg-none">
                     </li>
-                    <li class="nav-item active mx-xl-5 mx-lg-3">
+                    <li class="nav-item  active mx-xl-5 mx-lg-3">
                         <a class="nav-link" href="#">
                             <input id="prodCountStore" type="hidden" value="0">
                             <img id="cauldronImg" src="img/cauldron_empty.png" width="32">
@@ -72,7 +71,7 @@
             <div class="form my-2 p-2 my-lg-0 text-center">
                 <div class=" form-row">
                     <div class="col-12 col-lg-3 my-2 ">
-                        <select class="form-control w-100 " id="prodSelector" onclick="activateBtn()">
+                        <select class="form-control w-100 " id="prodSelector">
                             <option selected><b>Select a Product</b></option>
                             <optgroup label="Amulets">
                                 <option value="Al-fadhir O'din">Al-fadhir O'din</option>
@@ -91,17 +90,17 @@
                             <optgroup label="">
 
                             </optgroup>
-                            
+
                         </select>
                     </div>
                     <div class="col-12 col-lg-3 my-2 ">
-                        <input class="form-control " type="number" placeholder="price" id="priceInput" onkeyup="activateBtn()">
+                        <input class="form-control " type="number" placeholder="price" id="priceInput">
                     </div>
                     <div class="col-12 col-lg-3 my-2 ">
-                        <input class="form-control " type="number" placeholder="Quantity" id="qtyInput" onkeyup="activateBtn()">
+                        <input class="form-control " type="number" placeholder="Quantity" id="qtyInput">
                     </div>
                     <div class="col-12 col-lg-3 my-2 ">
-                        <button class=" btn btn-outline-prime my-2 my-sm-0" id="insertProduct_btn" disabled>Add to the Cauldron</button>
+                        <button class=" btn btn-outline-prime my-2 my-sm-0" id="insertProduct_btn">Add to the Cauldron</button>
                     </div>
                 </div>
             </div>
@@ -118,28 +117,30 @@
             <table class="table table-bordered table-hover table-dark p-0 m-0" id="cauldronTable">
                 <thead>
                     <tr>
-                        <th> 
+                        <th>
                             <span class="d-none d-lg-block">Product</span>
                             <span class="d-lg-none">Prod.</span>
                         </th>
-                        <th> 
+                        <th>
                             <span class="d-none d-lg-block">Quantity</span>
                             <span class="d-lg-none">Qty.</span>
                         </th>
-                        <th> 
+                        <th>
                             <span class="d-none d-lg-block">Unit Price</span>
                             <span class="d-lg-none">Price</span>
                         </th>
-                        <th> 
+                        <th>
                             <span class="d-none d-lg-block">Subtotal</span>
                             <span class="d-lg-none">SubT.</span>
                         </th>
                         <th><span class="d-lg-none">Del.</span></th>
                     </tr>
-                    
+
                 </thead>
                 <tbody>
-                   
+
+                </tbody>
+                <tfoot>
                     <tr id="totalrow">
                         <th colspan="3" class="text-right text-uppercase">
                             Total
@@ -150,7 +151,7 @@
                         </td>
                         <td class="d-none d-lg-block"><button class=" btn btn-outline-prime d-none d-lg-block w-100 " id="checkout_btn1">Checkout</button></td>
                     </tr>
-                </tbody>
+                </tfoot>
             </table>
             <p class="text-right disabled m-0 p-0">* 21% VAT included</p>
             <button class=" btn btn-outline-prime w-100  d-lg-none" id="checkout_btn2">Checkout</button>
@@ -162,14 +163,14 @@
     <!------------------------------------------------------------------------------->
     <!-----------------------------------Footer-------------------------------------->
     <!------------------------------------------------------------------------------->
-    <?php include "php/Components/_footer.php"?>
+    <?php include "php/Components/_footer.php" ?>
 
 
     <!------------------------------------------------------------------------------->
     <!-----------------------------------Scripts------------------------------------->
     <!------------------------------------------------------------------------------->
-    <script src="js/cartManager.js"></script>
-    <script src="js/headerScroll.js"></script>
+    <script src="js/cartManagerv2.js"></script>
+    <script src="js/headerManager.js"></script>
 </body>
 
 </html>
