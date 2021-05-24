@@ -14,13 +14,13 @@
 
 
 
-// "EventListeners"
+// "EventListeners on pageLoad"
 $(document).ready(function(){
  
     // Events
-    $(".addProduct_btn").click(addProduct);
+    
     insertProduct_btn.click(function(){
-        addProduct();
+        addProduct(this);
         insertProduct();
     });
     priceInput.keyup(activateBtn);
@@ -34,25 +34,30 @@ $(document).ready(function(){
 
 
 //addprodct to the Cauldron from Artefacts.php
-var addProduct = function () {
-    
-    if (currentCount == 0) {
-        $('#cauldronImg').attr("src","img/cauldron_full.png");
-        prodCountDisplay.removeClass('d-none');
-    }
-    currentCount++;
-    prodCountStore.val(currentCount);
-    prodCountDisplay.html(currentCount.toString());
+var addProduct = function (btn) {
 
+    let product = btn.children("input")[0].value;
+    let unitPrice = parseFloat(btn.children("input")[1].value);
+    console.log(product,unitPrice);
     //ajax Action: 
-    /*
+
     $.ajax({
         url: 'php/Controllers/_ccAddProduct.php',
-        type: 'POST',
-        data: currentCount,
-        success: function (code_html, statut) { },
-        error: function (resultat, statut, erreur) { }
-    });*/
+        method: 'POST',
+        data: { 'currentCount':currentCount+1,
+                'product':product,
+                'unitPrice':unitPrice },
+        success: function (code_html, statut) {   
+            if (currentCount == 0) {
+            $('#cauldronImg').attr("src","img/cauldron_full.png");
+            prodCountDisplay.removeClass('d-none');
+            }
+            currentCount++;
+            prodCountStore.val(currentCount);
+            prodCountDisplay.html(currentCount.toString());
+        },
+        });
+        
 }
 
 // Removes products from the cauldron display: 
@@ -148,7 +153,7 @@ var checkout= function(){
 
     currentCount=0;
     removeProduct();
-    
+
     currentTotal = 0;
     totalStore.val(currentTotal);
     totalDisplay.addClass("d-none");

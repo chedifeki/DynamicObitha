@@ -13,6 +13,8 @@
                 <button class=" addProduct_btn card-btn d-inline-flex justify-content-around align-items-center">
                     <span> Add</span>
                     <img src="img/cauldron_empty.png" width=32>
+                    <input class="ProductName" type=hidden value="Quartzium">
+                    <input class="ProductPrice" type=hidden value=69.0>
                 </button>
             </div>
         </div>

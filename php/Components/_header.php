@@ -25,9 +25,19 @@
                 </li>
                 <li class="nav-item mx-xl-5 mx-lg-3">
                     <a class="nav-link" href="cauldron.php">
-                        <input id="prodCountStore" type="hidden" value=0>
-                        <img id="cauldronImg" src="img/cauldron_empty.png" width="32">
-                        Cauldron <span class="d-none" id="prodCountDisplay"></span>
+                        <?php
+                        if (empty($_SESSION['currentCount']) || (int)$_SESSION['currentCount'] == 0) {
+                            echo "
+                                    <input id='prodCountStore' type='hidden' value=0>
+                                    <img id='cauldronImg' src='img/cauldron_empty.png' width='32'>
+                                    Cauldron <span class='d-none' id='prodCountDisplay'></span>";
+                        } else {
+                            echo "  
+                                    <input id='prodCountStore' type='hidden' value=" . $_SESSION['currentCount'] . ">
+                                    <img id='cauldronImg' src='img/cauldron_full.png' width='32'>
+                                    Cauldron <span class='' id='prodCountDisplay'>" . $_SESSION['currentCount'] . "</span> ";
+                        }
+                        ?>
                     </a>
                     <hr class="d-lg-none">
                 </li>
