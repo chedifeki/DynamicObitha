@@ -100,7 +100,7 @@
                         <input class="form-control " type="number" placeholder="Quantity" id="qtyInput">
                     </div>
                     <div class="col-12 col-lg-3 my-2 ">
-                        <button class=" btn btn-outline-prime my-2 my-sm-0" id="insertProduct_btn">Add to the Cauldron</button>
+                        <button class=" btn btn-outline-prime my-2 my-sm-0" id="insertProduct_btn" disabled>Add to the Cauldron</button>
                     </div>
                 </div>
             </div>
@@ -149,12 +149,12 @@
                             <input id="totalStore" type="hidden" value="0">
                             <div class="d-none" id="totalDisplay"> </div>
                         </td>
-                        <td class="d-none d-lg-block"><button class=" btn btn-outline-prime d-none d-lg-block w-100 " id="checkout_btn1">Checkout</button></td>
+                        <td class="d-none d-lg-block"><button class="checkout_btn btn btn-outline-prime d-none d-lg-block w-100 " id="checkout_btn1">Checkout</button></td>
                     </tr>
                 </tfoot>
             </table>
             <p class="text-right disabled m-0 p-0">* 21% VAT included</p>
-            <button class=" btn btn-outline-prime w-100  d-lg-none" id="checkout_btn2">Checkout</button>
+            <button class=" checkout_btn btn btn-outline-prime w-100  d-lg-none" id="checkout_btn2">Checkout</button>
         </div>
     </section>
 

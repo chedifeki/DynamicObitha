@@ -1,23 +1,36 @@
+ //Variables
+ var insertProduct_btn = $('#insertProduct_btn');
+ var totalStore = $("#totalStore");
+ var totalDisplay = $("#totalDisplay");
+ var tbody = $("tbody");
+
+ var prodSelector = $("#prodSelector");
+ var priceInput=$("#priceInput");
+ var qtyInput=$("#qtyInput");
+
+ var prodCountStore = $('#prodCountStore');
+ var prodCountDisplay = $('#prodCountDisplay');
+ var currentCount = parseInt(prodCountStore.val());
+
+
+
 // "EventListeners"
 $(document).ready(function(){
+ 
+    // Events
     $(".addProduct_btn").click(addProduct);
-    $("#insertProduct_btn").click(function(){
+    insertProduct_btn.click(function(){
         addProduct();
         insertProduct();
     });
+    priceInput.keyup(activateBtn);
+    qtyInput.keyup(activateBtn);
+
+    $(".checkout_btn").click(checkout);
 })
 
 
 
-// variables
-var totalStore = $("#totalStore");
-var totalDisplay = $("#totalDisplay");
-var tbody = $("tbody");
-
-
-var prodCountStore = $('#prodCountStore');
-var prodCountDisplay = $('#prodCountDisplay');
-var currentCount = parseInt(prodCountStore.val());
 
 
 //addprodct to the Cauldron from Artefacts.php
@@ -42,12 +55,30 @@ var addProduct = function () {
     });*/
 }
 
+// Removes products from the cauldron display: 
+function removeProduct(){
+    if (currentCount>0){
+        currentCount--;
+    }
+    
+    if (currentCount == 0) {
+        $('#cauldronImg').attr("src","img/cauldron_empty.png");
+        prodCountDisplay.addClass('d-none');
+    }
+    
+    prodCountStore.val(currentCount);
+    prodCountDisplay.html(currentCount.toString());
+
+}
+
+
+
+
+
 var insertProduct = function(){
     //document elements 
 
-    let prodSelector = $("#prodSelector");
-    let priceInput=$("#priceInput");
-    let qtyInput=$("#qtyInput");
+    
 
     //values 
     let currentTotal = parseFloat(totalStore.val());
@@ -79,8 +110,74 @@ var insertProduct = function(){
      qtyInput.val('');
 
     // disable button 
-    /*
-    $('#insertProduct_btn').attr("disabled" , true);
-    */
+    insertProduct_btn.attr("disabled" , true);
+    
+}
+//Deletes product from Table, also calls removeProduct
+function deleteProduct(btn){
+    let currentTotal = parseFloat(totalStore.val());
+
+    let parentTD = $(btn).parent();
+    let parentTR = $(parentTD).parent();
+
+    
+    let linePrice=parseFloat(parentTD.prev().html());
+    
+    currentTotal -= linePrice;
+    
+    // update Total
+    totalStore.val(currentTotal);
+    if (currentTotal>0){
+        totalDisplay.html(currentTotal.toString()+" TND");
+    }
+    else{
+        totalDisplay.addClass("d-none");
+    }
+    
+    //remove the line from the table
+    parentTR.remove();
+
+    // reduce product count on navbar Icon
+    removeProduct();
+
 }
 
+
+var checkout= function(){
+    tbody.children().remove();
+
+    currentCount=0;
+    removeProduct();
+    
+    currentTotal = 0;
+    totalStore.val(currentTotal);
+    totalDisplay.addClass("d-none");
+}
+
+
+var activateBtn = function(){
+    let prod = prodSelector.val();
+    let price=parseFloat(priceInput.val());
+    let qty=parseInt(qtyInput.val());
+    
+    
+    if (!(prod=="Select a Product" ||isNaN(price)|| isNaN(qty))){
+        if (price>0){
+            if(qty>0){
+                insertProduct_btn.attr("disabled",false);
+            }
+            else{
+                alert("Please enter a valid Quantity!");
+                insertProduct_btn.attr("disabled",true);
+            }
+        }
+        else{
+            alert("Please enter a valid price!");
+            insertProduct_btn.attr("disabled",true);
+        }
+        
+    }
+    else{
+        insertProduct_btn.attr("disabled",true);
+    }
+}
