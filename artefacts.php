@@ -42,7 +42,7 @@
                         </a>
                         <hr class="d-lg-none">
                     </li>
-                    <li class="nav-item mx-xl-5 mx-lg-3">
+                    <li class="nav-item mx-xl-5 mx-lg-3" id="cauldronNavContainer">
                         <a class="nav-link" href="cauldron.php" id="cauldronNav">
                             
                             <?php 

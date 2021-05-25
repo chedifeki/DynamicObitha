@@ -23,8 +23,9 @@
                     </a>
                     <hr class="d-lg-none">
                 </li>
-                <li class="nav-item mx-xl-5 mx-lg-3">
-                    <a class="nav-link" href="cauldron.php">
+                <li class="nav-item mx-xl-5 mx-lg-3" id="cauldronNavContainer">
+                    <a class="nav-link" href="cauldron.php" id="cauldronNav">
+
                         <?php
                         if (empty($_SESSION['currentCount']) || (int)$_SESSION['currentCount'] == 0) {
                             echo "
@@ -38,6 +39,8 @@
                                     Cauldron <span class='' id='prodCountDisplay'>" . $_SESSION['currentCount'] . "</span> ";
                         }
                         ?>
+
+
                     </a>
                     <hr class="d-lg-none">
                 </li>

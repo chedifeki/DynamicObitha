@@ -18,18 +18,19 @@ var addProduct = function (btn) {
 
     let product = btn.children("input")[0].value;
     let unitPrice = parseFloat(btn.children("input")[1].value);
-    console.log(product,unitPrice);
+    
     //ajax Action: 
 
     $.ajax({
-        url: 'php/Controllers/_ccAddProduct.php',
+        url: 'php/Controllers/ccAddProduct.php',
         method: 'POST',
         data: { 
                 'product':product,
                 'unitPrice':unitPrice },
         success: function (code_html, statut) {  
-            $('#cauldronNav').load("artefacts.php #cauldronNav")
-        },
+            $('#cauldronNavContainer').load("artefacts.php #cauldronNav");
+        }
+        
         });
         
 }

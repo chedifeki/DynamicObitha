@@ -14,7 +14,12 @@
                 </h2>
             </div>
             <div class="col-7 col-lg-6 col-xl-7 text-center">
-                <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"><span> Add</span><img src="img/cauldron_empty.png" width=32> </button>
+                <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center">
+                    <span> Add</span>
+                    <img src="img/cauldron_empty.png" width=32>
+                    <input class="ProductName" type=hidden value="Magic Tricks With Children">
+                    <input class="ProductPrice" type=hidden value=53.0>
+                </button>
             </div>
         </div>
     </div>

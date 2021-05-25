@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start(); //session_destroy();?>
 <!DOCTYPE html>
 <html>
 
@@ -36,8 +36,9 @@
                         </a>
                         <hr class="d-lg-none">
                     </li>
-                    <li class="nav-item  active mx-xl-5 mx-lg-3">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item  active mx-xl-5 mx-lg-3" id="cauldronNavContainer">
+                        <a class="nav-link" href="cauldron.php" id="cauldronNav">
+
                             <?php
                             if (empty($_SESSION['currentCount']) || (int)$_SESSION['currentCount'] == 0) {
                                 echo "
@@ -51,6 +52,8 @@
                                     Cauldron <span class='' id='prodCountDisplay'>" . $_SESSION['currentCount'] . "</span> ";
                             }
                             ?>
+
+
                         </a>
                         <hr class="d-lg-none">
                     </li>
@@ -81,32 +84,28 @@
             <p class="text-center memp">Select Product, Price and quantity</p>
             <div class="form my-2 p-2 my-lg-0 text-center">
                 <div class=" form-row">
-                    <div class="col-12 col-lg-3 my-2 ">
+                    <div class="col-12 col-lg-6 my-2 ">
                         <select class="form-control w-100 " id="prodSelector">
                             <option selected><b>Select a Product</b></option>
                             <optgroup label="Amulets">
-                                <option value="Al-fadhir O'din">Al-fadhir O'din</option>
-                                <option value="Khomsa" disabled>Khomsa</option>
-                                <option value="Oeil" disabled>Oeil</option>
+                                <option value="15.0">Al-Fadhir O'din</option>
+                                <option value="" disabled>Khomsa</option>
+                                <option value="" disabled>Oeil</option>
                             </optgroup>
                             <optgroup label="Crystals">
-                                <option value="Citrine">Citrine</option>
-                                <option value="Quartzium">Quartzium</option>
+                                <option value="156.0">Citrine</option>
+                                <option value="69.0">Quartzium</option>
                             </optgroup>
                             <optgroup label="Potions">
-                                <option value="Health Potion">Health Potion</option>
-                                <option value="Boiling Water">Boiling Water</option>
-                                <option value="Felix Felicis">Felix Felicis</option>
+                                <option value="69.0">Health Potion</option>
+                                <option value="222.0">Boiling Water</option>
+                                <option value="420.0">Felix Felicis</option>
                             </optgroup>
-                            <optgroup label="">
 
-                            </optgroup>
 
                         </select>
                     </div>
-                    <div class="col-12 col-lg-3 my-2 ">
-                        <input class="form-control " type="number" placeholder="price" id="priceInput">
-                    </div>
+
                     <div class="col-12 col-lg-3 my-2 ">
                         <input class="form-control " type="number" placeholder="Quantity" id="qtyInput">
                     </div>
@@ -124,7 +123,7 @@
     <!-------------------------------CauldronDisplay--------------------------------->
     <!------------------------------------------------------------------------------->
     <section class="container mb-4">
-        <div class="dp1 rounded p-2 p-lg-4">
+        <div class="dp1 rounded p-2 p-lg-4" id="tableContainer">
             <table class="table table-bordered table-hover table-dark p-0 m-0" id="cauldronTable">
                 <thead>
                     <tr>
@@ -150,19 +149,21 @@
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($_SESSION['Cauldron'] as $product => $tab) {
-                        echo "
-                                <tr>
-                                    <td>" . $product . "</td>
-                                    <td>" . $tab[0] . "</td>
-                                    <td>" . $tab[1] . "</td>
-                                    <td>" . (float)$tab[0] * $tab[1] . "</td>
-                                    <td><button class='invisible-btn deleteProduct_btn' onclick='deleteProduct(this)'><i class='far fa-trash-alt'></i></button></td>
-                           
-                                </tr> 
-                                   ";
-                    }
-                    ?>
+                        if(!empty($_SESSION['Cauldron'])){
+                            foreach ($_SESSION['Cauldron'] as $product => $tab) {
+                                echo "
+                                    <tr>
+                                        <td>" . $product . "</td>
+                                        <td>" . $tab[0] . "</td>
+                                        <td>" . $tab[1] . "</td>
+                                        <td>" . $tab[2] . "</td>
+                                        <td><button class='invisible-btn deleteProduct_btn' onclick='deleteProduct(this)'><i class='far fa-trash-alt'></i></button></td>
+                            
+                                    </tr> 
+                                    ";
+                            }
+                        }
+                        ?>
                 </tbody>
                 <tfoot>
                     <tr id="totalrow">
@@ -170,20 +171,31 @@
                             Total
                         </th>
                         <td id="totalcol">
+                        <!-- legacy stuuf 
                             <input id="totalStore" type="hidden" value="0">
-                            <div class="d-none" id="totalDisplay"> </div>
+                            <div class="d-none" id="totalDisplay"> </div>-->
+                            <?php
+                                if(!empty($_SESSION['Cauldron'])){
+                                    $total=0;
+                                    foreach ($_SESSION['Cauldron'] as $product => $tab) {
+                                        $total+=$tab[2];
+                                    }
+                                    echo $total." TND";
+                                }
+                            ?>
                         </td>
-                        <td class="d-none d-lg-block"><button class="checkout_btn btn btn-outline-prime d-none d-lg-block w-100 " id="checkout_btn1">Checkout</button></td>
+                        <td class="d-none d-lg-block"><button class="checkout_btn btn btn-outline-prime d-none d-lg-block w-100 " id="checkout_btn1" onclick='checkout()'>Checkout</button></td>
                     </tr>
                 </tfoot>
             </table>
             <p class="text-right disabled m-0 p-0">* 21% VAT included</p>
-            <button class=" checkout_btn btn btn-outline-prime w-100  d-lg-none" id="checkout_btn2">Checkout</button>
+            <button class=" checkout_btn btn btn-outline-prime w-100  d-lg-none" id="checkout_btn2" onclick='checkout()'>Checkout</button>
         </div>
     </section>
 
 
-
+    <!-----------------------------------Thank You Modal----------------------------->
+    <?php include "php/Components/_ThankYouModal.php" ?>
     <!------------------------------------------------------------------------------->
     <!-----------------------------------Footer-------------------------------------->
     <!------------------------------------------------------------------------------->
