@@ -130,3 +130,25 @@ var activateBtn = function(){
     }
     
 }
+
+
+var updateQty= function(btn){
+    let op = $(btn).text();
+    let product = $(btn).parent().parent().prev().text();
+        console.log(op,product);
+    $.ajax({
+        url: 'php/Controllers/ccUpdateQty.php',
+        method:'POST',
+        data: {
+            'product':product,
+            'op':op
+        },
+        success: function(){
+            console.log("hello world");
+            $("#tableContainer").load("cauldron.php #cauldronTable");
+        },
+        error: function(){
+            console.log("error while UpdateQantity")
+        }
+    });
+}

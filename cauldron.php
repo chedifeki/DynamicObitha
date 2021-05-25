@@ -127,6 +127,7 @@
             <table class="table table-bordered table-hover table-dark p-0 m-0" id="cauldronTable">
                 <thead>
                     <tr>
+                        
                         <th>
                             <span class="d-none d-lg-block">Product</span>
                             <span class="d-lg-none">Prod.</span>
@@ -153,8 +154,9 @@
                             foreach ($_SESSION['Cauldron'] as $product => $tab) {
                                 echo "
                                     <tr>
+                                        
                                         <td>" . $product . "</td>
-                                        <td>" . $tab[0] . "</td>
+                                        <td id='qtytd'><div class='w-100 my-auto d-inline-flex justify-content-around'><button class='col-3 my-2 btn btn-outline-prime QtyModifier'onclick='updateQty(this)' ".$_SESSION['disable'].">-</button><input class=' my-2 col-5 form-control' type=number value=".$tab[0]." readonly><button class=' my-2 col-3 btn btn-outline-prime' onclick='updateQty(this)'>+</button></div></td>
                                         <td>" . $tab[1] . "</td>
                                         <td>" . $tab[2] . "</td>
                                         <td><button class='invisible-btn deleteProduct_btn' onclick='deleteProduct(this)'><i class='far fa-trash-alt'></i></button></td>

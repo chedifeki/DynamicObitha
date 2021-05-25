@@ -29,7 +29,9 @@ section h2{
     
 }
 
-
+#qtytd {
+    max-width :100px;
+}
 
 
 .nav-link img{
