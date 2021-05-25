@@ -10,7 +10,8 @@ Concepts applied:
 * HTML5 document structure
 * CSS3 and Bootstrap integration for responsiveness
 * vanilla JavaScript and basic DOM manipulations  
-
+* Jquery and AJAX integration
+* Some PHP Session operations
 
 ---
 

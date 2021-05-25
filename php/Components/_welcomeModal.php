@@ -17,6 +17,8 @@
                     <li>HTML5 document structure</li>
                     <li>CSS3 and Bootstrap integration for responsiveness</li>
                     <li>vanilla JavaScript and basic DOM manipulations</li>
+                    <li>Jquery and AJAX integrations</li>
+                    <li>Some PHP Session operations</li>
                 </ul>
                 <hr>
                 While the above mentioned concepts are applied seriously, the creator of this website
